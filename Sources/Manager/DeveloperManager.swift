@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by playhong on 2023/07/26.
 //
@@ -25,11 +25,11 @@ final class DeveloperManager {
         return developers
     }
     
-    func getFilteredList() -> [Developer] {
-        let filteredList = getDevelopers().filter { developer in
-            developer.isLiked == false
+    func getDeveloperList() -> [Developer] {
+        let developerList = getDevelopers().filter { developer in
+            developer.isInterviewed == false && developer.isPassed == false
         }
-        return filteredList
+        return developerList
     }
 }
 
