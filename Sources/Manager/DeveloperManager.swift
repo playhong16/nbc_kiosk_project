@@ -7,7 +7,8 @@
 
 import Foundation
 
-final class DeveloperManager {
+// 개발자를 담당하는 객체
+final class DeveloperManager: Manager {
     
     static let shared = DeveloperManager()
     
@@ -20,16 +21,19 @@ final class DeveloperManager {
     
     private init() {}
 
-    
     private func getDevelopers() -> [Developer] {
         return developers
     }
     
-    func getDeveloperList() -> [Developer] {
+    func getList() -> [Developer] {
         let developerList = getDevelopers().filter { developer in
             developer.isInterviewed == false && developer.isPassed == false
         }
         return developerList
+    }
+    
+    func add(developer: Developer) {
+        print("나중에 추가도 구현하겠음.")
     }
 }
 
