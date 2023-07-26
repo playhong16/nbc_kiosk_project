@@ -1,3 +1,3 @@
-# MyLibrary
+# ⭐️ 2조 iOS 개발자 채용 명단 만들기 ⭐️
 
-A description of this package.
+

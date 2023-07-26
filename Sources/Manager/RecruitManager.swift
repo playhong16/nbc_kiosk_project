@@ -1,9 +1,4 @@
-//
-//  File.swift
-//  
-//
-//  Created by playhong on 2023/07/26.
-//
+
 
 import Foundation
 
@@ -21,7 +16,7 @@ final class RecruitManager {
         } else {
             developer.isLiked = true
             employmentList.append(developer)
-            print("\(developer.name) 님이 채용 명단에 추가되었습니다.")
+            print("\(developer.name) 님이 채용 명단에 추가되었습니다.\n")
         }
     }
     
@@ -30,7 +25,7 @@ final class RecruitManager {
         if let index = employmentList.firstIndex(where: { $0.name == developer.name }) {
             developer.isLiked = false
             employmentList.remove(at: index)
-            print("\(developer.name) 님이 채용 명단에서 제거되었습니다.")
+            print("\n\(developer.name) 님이 채용 명단에서 제거되었습니다.\n")
         } else {
             print("\(developer.name) 님은 채용 명단에 없습니다.")
         }

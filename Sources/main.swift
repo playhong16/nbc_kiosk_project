@@ -1,9 +1,4 @@
-//
-//  File.swift
-//  
-//
-//  Created by playhong on 2023/07/26.
-//
+
 
 import Foundation
 
@@ -52,7 +47,7 @@ class RecruitmentService {
     
     private func getNumber() {
         print(Constant.divisionLine)
-        print(" 원하시는 개발자의 번호를 입력해주세요.")
+        print("\n 원하시는 개발자의 번호를 입력해주세요.")
         guard let input = readLine() else { return }
         guard let number = Int(input) else {
             print(" 번호를 입력해주세요.")
@@ -90,7 +85,7 @@ class RecruitmentService {
     }
     
     private func showRemovalMenu() {
-        print("           [ 채용 명단에서 삭제하기 ]")
+        print("        [ 채용 명단에서 삭제하기 ]")
         print("")
         showEmploymentList()
         print(" 삭제하고 싶은 개발자의 번호를 입력해주세요.")
@@ -115,7 +110,7 @@ class RecruitmentService {
         print("희망 연봉 : \(developer.salary) 원")
         print(Constant.divisionLine)
         print("0. 뒤로가기")
-        print("1. 채용 명단에 추가하기")
+        print("1. 채용 명단에 추가하기\n")
         if let input = readLine() {
             selectDetailPageMenu(number: input, developer: developer)
         }
@@ -145,7 +140,7 @@ class RecruitmentService {
             var index = 0
             for developer in employmentList {
                 index += 1
-                print(" \(index). \(developer.name) | MBTI: \(developer.mbti) | 기술 스택: \(developer.techStack)  | 희망 연봉: \(developer.salary)원")
+                print(" \(index). \(developer.name) | MBTI: \(developer.mbti) | 기술 스택: \(developer.techStack)  | 희망 연봉: \(developer.salary)원\n")
             }
         }
     }
